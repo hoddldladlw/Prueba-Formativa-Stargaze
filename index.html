@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,45 +7,94 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="nav-left">
-            <img src="IMG/estrellas.png" alt="Stargaze Logo" class="logo">
-            <h1>Stargaze</h1>
-            <img src="IMG/estrellas.png" alt="Stargaze Logo" class="logo">
-        </div>
 
-        <nav class="nav-links">
-            <a href="#">Planetas</a>
-            <a href="#">Estrellas</a>
-            <a href="#">Constelaciones</a>
-            <a href="#">Estrellas Fugaces</a>
-    </nav>
-
-    <div class ="nav-search">
-        <input type="text" id="searchInput" placeholder="Buscar">
-        <button id="BotonDeBusqueda">
-        <img src="IMG/buscar.png" alt="Stargaze Logo" class="logo">
-        </button>
+    <header class="navbar">
+        <div class="top-nav">
+            <div class="logo-area">
+                <img src="IMG/estrellas.png" alt="Icono" class="logo-icon">
+                <span class="logo-text">Stargaze</span>
+                <img src="IMG/estrellas.png" alt="Icono" class="logo-icon">
+            </div>
+            <div class="top-icons">
+                <button class="circle-btn"><img src="IMG/info.png" alt="Info"></button>
+                <button class="circle-btn"><img src="IMG/email.png" alt="Email"></button>
+                <button class="circle-btn"><img src="IMG/telefono.png" alt="Teléfono"></button>
+            </div>
         </div>
+        <div class="bottom-nav">
+            <nav class="nav-links">
+                <a href="#">Planetas</a>
+                <a href="#">Estrellas</a>
+                <a href="#">Constelaciones</a>
+                <a href="#">Estrellas Fugaces</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar">
+                <button id="searchBtn">
+                    <img src="IMG/buscar.png" alt="Buscar">
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-container">
         
-        <div class="nav-icons">
-            </button><img src="IMG/info.png" alt="Usuario" class="icon"></button>
-            </button><img src="IMG/email.png" alt="Favoritos" class="icon"></button>
-            </button><img src="IMG/telefono.png" alt="Carrito" class="icon"></button>
+        <section class="feed">
+            <article class="post-card">
+                <div class="post-header">
+                    <img src="IMG/mundo.png" alt="Avatar" class="user-avatar">
+                    <div class="user-info">
+                        <h3>Estrellados</h3>
+                        <p>Hace 6 minutos</p>
+                    </div>
+                    <div class="post-options">
+                        <img src="IMG/puntos.png" alt="Opciones">
+                    </div>
+                </div>
+
+                <p class="post-text">Quiero compartir con mis amigos esta bella constelación que encontré hace un par de días.</p>
+                
+                <div class="post-image-container">
+                    <img src="IMG/constelacion.jpg" alt="Constelación" class="post-img">
+                </div>
+
+                <div class="post-actions">
+                    <button id="likeBtn" class="action-btn">
+                        <img src="IMG/like.png" alt="Me gusta"> 
+                        <span id="likeCount">50</span>
+                    </button>
+                    <button class="action-btn">
+                        <img src="IMG/love.png" alt="Corazón"> 
+                        <span id="heartCount">21</span>
+                    </button>
+                </div>
+            </article>
+        </section>
+
+        <aside class="sidebar">
+            <h2>Publicidad</h2>
+            
+            <div class="ad-card">
+                <span class="ad-label">Ad</span>
+                <p>Tenemos las noticias estelares</p>
+                <div class="ad-star">
+                    <img src="IMG/estelar.png" alt="Estrella" class="star-icon">
+                </div>
+                <button class="follow-btn">Seguir</button>
             </div>
 
-            <main class="main-container">
-                <section class="feed">
-                    <article class="post-card"
-                    <div class="post-header">
-                        <img src="IMG/mundo.png" alt="Avatar" class="user-avatar">
-                        <div class="user-info">
-                            <h3>Estrellados </h3>
-                            <p> Hace 6 minutos</p>
-                        </div>
-                    </div>
-                </section>
+            <div class="ad-card">
+                <span class="ad-label">Ad</span>
+                <p>Recibe recompensas de otro planeta</p>
+                <div class="ad-star">
+                    <img src="IMG/star.png" alt="Star" class="star-icon">
+                </div>
+                <button class="follow-btn">Seguir</button>
+            </div>
+        </aside>
 
-    </header> 
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
