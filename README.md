@@ -1,3 +1,3 @@
 Prueba stargaze
 Benjamin Ignacio Huerta Santander
-Matias Ignacio Nuñez Blanco
+Matías Ignacio Núñez Blanco
