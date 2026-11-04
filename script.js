@@ -19,3 +19,27 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+const followButtons = document.querySelectorAll(".follow-btn");
+    followButtons.forEach(button => {
+        button.addEventListener("click", () => {
+            button.style.display = "none";
+        });
+    });
+   const searchInput = document.getElementById("searchInput");
+    const searchBtn = document.getElementById("searchBtn");
+
+    function ejecutarBusqueda() {
+        const texto = searchInput.value.trim();
+        if (texto !== "") {
+            alert(texto);
+        }
+    }
+
+    if (searchBtn && searchInput) {
+        searchBtn.addEventListener("click", ejecutarBusqueda);
+        searchInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") {
+                ejecutarBusqueda();
+            }
+        });
+    }
